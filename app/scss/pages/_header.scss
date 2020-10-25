@@ -1,0 +1,254 @@
+// start header
+.header {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	// .header__content
+	&__content {
+		height: 100vh;
+		position: relative;
+		&:before {
+			position:absolute;
+			content: "";
+			top:0;
+			left:0;
+			width: 100%;
+			height: 100%;
+			background-image: url('../../images/super-bg-1920x1080.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			z-index: -1;
+		}
+		&:after {
+			position:absolute;
+			content: "vanzer";
+			bottom: 120px;
+			transform: translateX(-65%);
+			opacity: 0.05;
+			color: #fff;
+			font-family: "Lato";
+			font-size: 250px;
+			font-weight: 900;
+			line-height: 60.96px;
+			text-transform: uppercase;
+			letter-spacing: 125px;
+			@media (max-width: 991.98px) {
+				display: none;
+			};
+		}
+	}
+	// .header__bg-img
+	&__bg-img {
+		position: absolute;
+		top: -20px;
+		left:-40px;
+		bottom: -20px;
+		right: -20px;
+		z-index: -2;
+		& source, img {
+			width: 110%;
+			height: 110%;
+			object-fit: cover;
+			object-position:center;
+		}
+		@media (max-width: 479.98px) {
+			left:-15px;
+			& source, img {
+				width: 120%;
+				height: 120%;
+				object-fit: cover;
+				object-position:center;
+			}
+		};
+	}
+	// .header__inner
+	&__inner {
+		position: relative;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-left: 170px;
+		@media (max-width: 767.98px) {
+			padding-left: 100px;
+		};
+		@media (max-width: 550px) {
+			padding-left: 50px;
+		};
+	}
+	// .header__title
+	&__title {
+		color: #ffffff;
+		font-family: 'Lato';
+		font-size: 72px;
+		font-weight: 900;
+		line-height: 60.96px;
+		text-transform: uppercase;
+		letter-spacing: 36px;
+		@media (max-width: 830px) {
+			font-size: 50px;
+		};
+		@media (max-width: 600px) {
+			font-size: 35px;
+		};
+		@media (max-width: 479.98px) {
+			letter-spacing: 20px;
+			font-size: 25px;
+		};
+	}
+	// .header__subtitle
+	&__subtitle {
+		color: #b3b3b3;
+		font-family: 'TTNorms';
+		font-size: 21px;
+		font-weight: 500;
+		line-height: 25px;
+		text-transform: uppercase;
+		letter-spacing: 5.25px;
+		padding: 33px 0 70px;
+		@media (max-width: 830px) {
+			font-size: 14px;
+		};
+		@media (max-width: 600px) {
+			font-size: 8px;
+			padding: 10px 0 50px;
+		};
+	}
+	// .header__link
+	&__link {
+		&:hover .header__link-span:before {
+			transition-duration: 0.3s;
+			right: -5px;
+		}
+		&-span {
+			position: relative;
+			color: #fff;
+			font-family: Lato;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 61px;
+			text-transform: uppercase;
+			letter-spacing: 1.4px;
+			padding-right: 30px;
+			padding-top: 30px;
+			@media (max-width: 600px) {
+				font-size: 10px;
+				padding-right: 20px;
+				padding-top: 20px;
+			};
+			&:before {
+				transition-duration: 0.3s;
+				position:absolute;
+				content: "";
+				bottom: 2px;
+				right: 0;
+				width: 20px;
+				height: 10px;
+				background-image: url('../../images/icons/arrow-bold-right.svg');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 20px 10px;
+				@media (max-width: 600px) {
+					bottom: 3px;
+					width: 10px;
+					height: 5px;
+					background-size: 10px 5px;
+				};
+			}
+			&:after {
+				position:absolute;
+				content: "";
+				top:0;
+				left:0;
+				width: 230px;
+				height: 3px;
+				background-color: #ff4200;
+				@media (max-width: 600px) {
+					height: 2px;
+				};
+				@media (max-width: 479.98px) {
+					width: 200px;
+				};
+			}
+		}
+	}
+	// .header__scroll-box
+	&__scroll-box {
+		position: absolute;
+		left: 22%;
+		bottom: 110px;
+		z-index: 5;
+		transform: rotate(90deg);
+		@media (max-width: 767.98px) {
+			display: none;
+		};
+		@media (max-height: 560px) {
+			display: none;
+		};
+	}
+	// .header__scroll-svg
+	&__scroll-svg {
+		width: 30px;
+		height: 45px;
+		fill: #fff;
+		position: absolute;
+		bottom: -45px;
+		left: -48px;
+	}
+	// .header__scroll-cont
+	&__scroll-cont {
+		position: relative;
+	}
+	// .header__scroll-text
+	&__scroll-text {
+		position: relative;
+		color: #737373;
+		font-family: "TTNorms";
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 60.96px;
+		text-transform: uppercase;
+		letter-spacing: 1.4px;
+		padding: 25px 0;
+		&:before {
+			position:absolute;
+			content: "";
+			bottom: 1px;
+			left:0;
+			width: 200px;
+			height: 3px;
+			background-color: #737373;
+		}
+	}
+	// .header__scroll-arr
+	&__scroll-arr {}
+	&__scroll-arr--2, 
+	&__scroll-arr--1 {
+		opacity: 0;
+		animation-name: scroll-arr;
+		animation-duration: 1.5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-fill-mode: none;
+	}
+	&__scroll-arr--1 {
+		animation-delay: 0.3s;
+	}
+	@keyframes scroll-arr {
+		0% {
+			transition-duration: 0.5s;
+			opacity: 0
+		}
+		100% {
+			transition-duration: 0.5s;
+			opacity: 1
+		}
+	}
+}
+// end header
+
+
+
+

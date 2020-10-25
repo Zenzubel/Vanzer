@@ -1,0 +1,19 @@
+.title {
+	font-family: "TTnorms";
+	font-size: 42px;
+	font-weight: 500;
+	line-height: 60.96px;
+	text-transform: uppercase;
+	letter-spacing: 16.8px;
+	position: relative;
+	display: inline-block;
+	&:before {
+		position:absolute;
+		content: "";
+		bottom: -30px;
+		left:0;
+		width: 100%;
+		height: 3px;
+		background-color: #ff4200;
+	}
+}

@@ -1,0 +1,10 @@
+.DC_Store
+.AppIeDouble
+.LSOverride
+node_modules/
+maket
+package-lock.json
+.sublime
+www.txt
+kit
+script
